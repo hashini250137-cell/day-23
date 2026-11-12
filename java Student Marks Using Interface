@@ -1,0 +1,20 @@
+interface Result {
+    void calculate();
+}
+
+class Student implements Result {
+    public void calculate() {
+        int a = 80, b = 90, c = 85;
+        int total = a + b + c;
+
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average: " + (total / 3));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.calculate();
+    }
+}
