@@ -1,0 +1,25 @@
+interface Printer {
+    void print();
+}
+
+class PDF implements Printer {
+    public void print() {
+        System.out.println("Printing PDF Document");
+    }
+}
+
+class Word implements Printer {
+    public void print() {
+        System.out.println("Printing Word Document");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PDF p = new PDF();
+        Word w = new Word();
+
+        p.print();
+        w.print();
+    }
+}
