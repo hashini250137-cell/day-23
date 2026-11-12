@@ -1,0 +1,27 @@
+interface Bank {
+    void deposit();
+    void withdraw();
+}
+
+class Account implements Bank {
+    int balance = 5000;
+
+    public void deposit() {
+        balance = balance + 2000;
+        System.out.println("Balance after Deposit: " + balance);
+    }
+
+    public void withdraw() {
+        balance = balance - 1000;
+        System.out.println("Balance after Withdrawal: " + balance);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account a = new Account();
+
+        a.deposit();
+        a.withdraw();
+    }
+}
