@@ -1,0 +1,25 @@
+interface Delivery {
+    void deliver();
+}
+
+class HomeDelivery implements Delivery {
+    public void deliver() {
+        System.out.println("Food delivered to home");
+    }
+}
+
+class Pickup implements Delivery {
+    public void deliver() {
+        System.out.println("Food ready for pickup");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HomeDelivery h = new HomeDelivery();
+        Pickup p = new Pickup();
+
+        h.deliver();
+        p.deliver();
+    }
+}
