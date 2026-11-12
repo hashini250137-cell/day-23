@@ -1,0 +1,26 @@
+interface Father {
+    void father();
+}
+
+interface Mother {
+    void mother();
+}
+
+class Child implements Father, Mother {
+    public void father() {
+        System.out.println("Father's Property");
+    }
+
+    public void mother() {
+        System.out.println("Mother's Property");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+
+        c.father();
+        c.mother();
+    }
+}
